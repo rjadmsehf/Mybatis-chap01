@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="dev">
+        <environment id="dev">
+            <!-- 필기. JDBC 와 MANAGED 둘 중 하나 선택 가능  -->
+            <transactionManager type="JDBC"></transactionManager>
+            <!-- 필기. POOLED 와 UNPOOLED 둘 중 하나 선택 가능 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost/menudb"/>
+                <property name="username" value="ohgiraffers"/>
+                <property name="password" value="ohgiraffers"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 필기. 컴퓨터는 말을 잘 듣기 때문에 항상 등록해주자 java -> addMapper -->
+    <mappers>
+        <mapper resource="mapper.xml"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 목차 매퍼의 이름 등록(변수명 같은 느낌) -->
+<mapper namespace="mapper">
+    <select id="selectSysdate" resultType="java.util.Date">  <!-- 매터를 mybatis-config 가서 꼭등록하자-->
+        SELECT
+            CURDATE()
+        FROM DUAL
+    </select>
+</mapper>
